@@ -1,0 +1,33 @@
+body
+{
+    background-size: cover;
+}
+
+.heading
+{
+    font-size: 33px;
+    width: 100%;
+    margin: 0px;
+    background-image: url("download.jpg");
+    color: white;
+    font-weight: bold;
+    background-size: auto;
+}
+
+.note
+{
+    font-size: 15px;
+    color: white
+}
+
+canvas
+{
+    border: 10px solid white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px black;
+}
+
+#song
+{
+    background-color: rgb(18, 156, 156);
+}
