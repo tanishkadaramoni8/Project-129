@@ -38,7 +38,20 @@ function draw()
 		if(song1_status == false)
 		{
 			song1.play();
-			document.getElementById("song").innerHTML = "Playing - Kanne Adhirindi"
+			document.getElementById("song").innerHTML = "Playing - Kanne Adhirindi";
+		}
+	}
+
+  if(scoreLeftWrist > 0.2)
+	{
+		circle(leftWristX,leftWristY,20);
+
+			song1.stop();
+
+		if(song2_status == false)
+		{
+			song2.play();
+			document.getElementById("song").innerHTML ="Playing - Saranga Dariya";
 		}
 	}
 }
@@ -66,6 +79,7 @@ function gotPoses(results)
   {
     console.log(results);
     scoreRightWrist =  results[0].pose.keypoints[10].score;
+    scoreLeftWrist =  results[0].pose.keypoints[9].score;
     leftWristX = results[0].pose.leftWrist.x;
     leftWristY = results[0].pose.leftWrist.y;
     console.log("leftWristX =" + leftWristX + ", leftWristY =" + leftWristY);
